@@ -22,7 +22,7 @@ const Navigation = () => {
       <Container className='py-3'>
         <div className='d-flex align-items-center justify-content-between'>
           <img src={logo1} alt="logo1" className='d-none d-lg-block' />
-          <img src={navimg} alt="navimg" className='w-100' />
+          <img src={navimg} alt="navimg" className='w-lg-100' />
         </div>
       </Container>
       <div className='shadow1'>
