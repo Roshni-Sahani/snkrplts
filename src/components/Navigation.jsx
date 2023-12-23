@@ -22,11 +22,11 @@ const Navigation = () => {
       <Container className='py-3'>
         <div className='d-flex align-items-center justify-content-between'>
           <img src={logo1} alt="logo1" className='d-none d-lg-block' />
-          <img src={navimg} alt="navimg" className='w-lg-100' />
+          <img src={navimg} alt="navimg" className='w-100' />
         </div>
       </Container>
       <div className='shadow1'>
-        <Container className='py-3'>
+        <Container className='py-lg-3'>
           <div className='d-flex align-items-center justify-content-between'>
             <img src={logo1} alt="logo1" className='d-block d-lg-none' />
             <label className='menu' onClick={nav}>
