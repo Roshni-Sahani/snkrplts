@@ -9,7 +9,15 @@ import shoes3 from "../assets/images/shoes3.png";
 import shoes4 from "../assets/images/shoes4.png";
 
 const Section1 = () => {
-  const [count, setCount] = useState(0);
+ let [count, setCount] = useState(1);
+
+    function incrementCount() {
+        setCount(prevCount => (prevCount < 10 ? prevCount + 1 : prevCount));
+    }
+  function decrementCount() {
+
+    setCount(prevCount => (prevCount > 1 ? prevCount - 1 : 1));
+  }
   return (
     <div>
       <Container>
@@ -17,21 +25,21 @@ const Section1 = () => {
           <Col xl={6}>
             <img src={shoes} alt="shoes" className="w-100" />
             <Row className="pt-4">
-              <Col lg={3} md={4} className="col-6">
-                <img src={shoes1} alt="shoes1" className="pt-3" />
+              <Col className="col-3">
+                <img src={shoes1} alt="shoes1" className="pt-3 w-100" />
               </Col>
-              <Col lg={3} md={4} className="col-6">
-                <img src={shoes2} alt="shoes2" className="pt-3" />
+               <Col className="col-3">
+                <img src={shoes2} alt="shoes2" className="pt-3 w-100" />
               </Col>
-              <Col lg={3} md={4} className="col-6">
-                <img src={shoes3} alt="shoes3" className="pt-3" />
+              <Col className="col-3">
+                <img src={shoes3} alt="shoes3" className="pt-3 w-100" />
               </Col>
-              <Col lg={3} md={4} className="col-6">
-                <img src={shoes4} alt="shoes4" className="pt-3" />
+                <Col className="col-3">
+                <img src={shoes4} alt="shoes4" className="pt-3 w-100" />
               </Col>
             </Row>
           </Col>
-          <Col xl={6} className="pt-5 ps-5">
+          <Col xl={6} className="pt-5 ps-xl-5">
             <h2 className="color-black ff-poppins fw-semibold fs-2xl">
               PREMIUM MENS SPORTS LATHER KEDS
             </h2>
@@ -79,9 +87,9 @@ const Section1 = () => {
                 Qty:
               </p>
               <div className="border d-flex align-items-center gap-3">
-                <Button onClick={() => setCount(count - 1)} className="color-grey ff-josefin fs-md lh-125 fw-normal border-none bg-transparent">-</Button>
+                <Button onClick={decrementCount}className="color-grey ff-josefin fs-md lh-125 fw-normal border-none bg-transparent">-</Button>
                    <p className="mb-0 fs-md ff-josefin color-grey fw-normal lh-125 align-items-center d-flex"> {count}</p>
-                <Button onClick={() => setCount(count + 1)} className="color-grey ff-josefin fs-md lh-125 fw-normal border-none bg-transparent">+</Button>
+                <Button onClick={incrementCount}className="color-grey ff-josefin fs-md lh-125 fw-normal border-none bg-transparent">+</Button>
               </div>
               <a
                 href=""
